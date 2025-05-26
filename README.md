@@ -25,7 +25,7 @@ Leveraging these contributions within a one-step diffusion model framework, Hone
 
 <!-- ![vis-main-top](images/vis-main-top.png) -->
 
-[<img src="images/WechatIMG498.jpg" height="220"/>](https://imgsli.com/MzgyMDY3) [<img src="images/WechatIMG500.jpg" height="220"/>](https://imgsli.com/MzgyMDY5) [<img src="images/WechatIMG502.jpg" height="220"/>](https://imgsli.com/MzgyMDcw)
+[<img src="images/WechatIMG498.jpg" height="250"/>](https://imgsli.com/MzgyMDY3) [<img src="images/WechatIMG500.jpg" height="250"/>](https://imgsli.com/MzgyMDY5) [<img src="images/WechatIMG502.jpg" height="250"/>](https://imgsli.com/MzgyMDcw)
 
 ---
 
@@ -68,6 +68,31 @@ Leveraging these contributions within a one-step diffusion model framework, Hone
 <li> Results in Figure 7 on Reface-Test from the main paper.
 <p align="center">
 <img src="images/vis/main-reface.png" >
+</p>
+</li>
+</details>
+<details>
+<summary style="margin-left: 2rem;">&ensp;More Comparisons on Real-World Data... </summary>
+<li style="margin-left: 2rem;"> Results in Figures 1, 2 from the supplementary materials.
+<p align="center">
+<img src="images/vis/supp-realworld-1.png" >
+</p>
+<p align="center">
+<img src="images/vis/supp-realworld-2.png" >
+</p>
+</li>
+</details>
+<details>
+<summary style="margin-left: 2rem;">&ensp;More Comparisons on Real-World Dataset... </summary>
+<li style="margin-left: 2rem;"> Results in Figures 3, 4, 5 on CelebHQRef-Test and Reface-Test from the supplementary materials.
+<p align="center">
+<img src="images/vis/supp-celebhqref.png" >
+</p>
+<p align="center">
+<img src="images/vis/supp-reface-1.png" >
+</p>
+<p align="center">
+<img src="images/vis/supp-reface-2.png" >
 </p>
 </li>
 </details>

@@ -2,7 +2,7 @@
 
 [Jingkai Wang](https://github.com/jkwang28), Wu Miao, [Jue Gong](https://github.com/gobunu), [Zheng Chen](https://zhengchen1999.github.io/), Xing Liu, Hong Gu, [Yutong Liu](https://isabelleliu630.github.io/), and [Yulun Zhang](http://yulunzhang.com/), "HonestFace: Towards Honest Face Restoration with One-Step Diffusion Model", 2024
 
-[![arXiv](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoSvg)]()
+[![arXiv](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoSvg)](https://arxiv.org/abs/2505.18469)
 [![supp](https://img.shields.io/badge/Supplementary_material-Paper-orange.svg)](https://github.com/jkwang28/HonestFace/releases/download/v1/supp.pdf)
 [![releases](https://img.shields.io/github/downloads/jkwang28/HonestFace/total.svg)](https://github.com/jkwang28/HonestFace/releases)
 [![visitors](https://visitor-badge.laobi.icu/badge?page_id=jkwang28.HonestFace&right_color=violet)](https://github.com/jkwang28/HonestFace)
@@ -105,7 +105,7 @@ If you find the code helpful in your research or work, please cite the following
 @article{wang2025honestface,
     title={HonestFace: Towards Honest Face Restoration with One-Step Diffusion Model},
     author={Wang, Jingkai and Miao, Wu and Gong, Jue and Chen, Zheng and Liu, Xing and Gu, Hong and Liu, Yutong and Zhang, Yulun},
-    journal={arxiv},
+    journal={arXiv preprint arXiv:2505.18469},
     year={2025}
 }
 ```

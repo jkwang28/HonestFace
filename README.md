@@ -25,7 +25,7 @@ Leveraging these contributions within a one-step diffusion model framework, Hone
 
 <!-- ![vis-main-top](images/vis-main-top.png) -->
 
-[<img src="images/WechatIMG498.jpg" height="250"/>](https://imgsli.com/MzgyMDY3) [<img src="images/WechatIMG500.jpg" height="250"/>](https://imgsli.com/MzgyMDY5) [<img src="images/WechatIMG502.jpg" height="250"/>](https://imgsli.com/MzgyMDcw)
+[<img src="images/WechatIMG498.jpg" height="275"/>](https://imgsli.com/MzgyMDY3) [<img src="images/WechatIMG500.jpg" height="275"/>](https://imgsli.com/MzgyMDY5) [<img src="images/WechatIMG502.jpg" height="275"/>](https://imgsli.com/MzgyMDcw)
 
 ---
 

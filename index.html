@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="HonestFace: Towards Honest Face Restoration with One-Step Diffusion Model">
+  <meta property="og:title" content="HonestFace" />
+  <meta property="og:description" content="Towards Honest Face Restoration with One-Step Diffusion Model" />
+  <meta property="og:url" content="https://jkwang28.github.io/HonestFace/" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/osdface.ico" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="face restoration, diffusion model, deep learning, computer vision">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>HonestFace</title>
+  <link rel="icon" type="image/x-icon" href="static/images/osdface.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+  <div id="loading" style="display: none;">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <button id="back-to-top" class="button is-primary is-rounded" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 99;">
+    <span class="icon">
+      <i class="fas fa-arrow-up"></i>
+    </span>
+  </button>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">HonestFace: Towards Honest Face Restoration with One-Step Diffusion Model</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/jkwang28" target="_blank">Jingkai Wang<sup>1</sup></a>,</span>
+              <span class="author-block">
+                <a href="https://github.com/wildddm" target="_blank">Wu Miao<sup>1</sup></a>,</span>
+              <span class="author-block">
+                <a href="https://github.com/gobunu" target="_blank">Jue Gong<sup>1</sup></a>,</span>
+              <span class="author-block">
+                <a href="https://zhengchen1999.github.io/" target="_blank">Zheng Chen<sup>1</sup></a>,</span>
+              <br />
+              <span class="author-block">
+                <a href="" target="_blank">Xing Liu<sup>2</sup></a>,</span>
+              <span class="author-block">
+                <a href="" target="_blank">Hong Gu<sup>2</sup></a>,</span>
+              <span class="author-block">
+                <a href="https://isabelleliu630.github.io/" target="_blank">Yutong
+                  Liu<sup>1</sup></a><sup>&dagger;</sup>,</span>
+              <span class="author-block">
+                <a href="http://yulunzhang.com/" target="_blank">Yulun Zhang<sup>1</sup></a><sup>&dagger;</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-institutions">
+              <!-- Institutions -->
+              <span class="institution-block">
+                <sup>1</sup>Shanghai Jiao Tong University,
+                <sup>2</sup>vivo Mobile Communication Co., Ltd
+              </span>
+              <span class="eql-cntrb">
+                <small><br><sup>&dagger;</sup>Indicates Corresponding Authors. </small>
+              </span>
+            </div>
+
+            <hr class="is-divider" style="width: 75%; margin: 1.5rem auto;">
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Paper PDF link -->
+                <span class="link-block">
+                  <a href="https://github.com/jkwang28/HonestFace/releases/download/v1/main.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2505.18469" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <span class="link-block">
+                  <a href="https://github.com/jkwang28/HonestFace/releases/download/v1/supp.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/jkwang28/HonestFace" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+
+              <!-- <div class="publication-links">
+                <!-- Visual Results link -->
+              <!-- <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1-Mfy8XHG55Bc19gAXqNaNitO0GEx7O1r?usp=drive_link" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-images"></i>
+                  </span>
+                  <span>Visual Results</span>
+                  </a>
+                </span> -->
+
+              <!-- Pretrained Models link -->
+              <!-- <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1hoHAG2yoLltloQ0SYv-QLxwk9Y8ZnTnH?usp=drive_link" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-archive"></i>
+                  </span>
+                  <span>Pretrained Models</span>
+                  </a>
+                </span> 
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Image Comparison Section -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Face Restoration</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-one-third">
+          <div style="width:300px;height:300px;overflow:hidden;border:0px">
+            <div style="width:300px;height:480px;margin:-76px 0px 0px -30px;">
+              <iframe src="https://imgsli.com/MzgyMDY3" width="360" height="400" scrolling="no" allow="fullscreen" style="border: none;"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div style="width:300px;height:300px;overflow:hidden;border:0px">
+            <div style="width:300px;height:480px;margin:-76px 0px 0px -30px;">
+              <iframe src="https://imgsli.com/MzgyMDY5" width="360" height="400" scrolling="no" allow="fullscreen" style="border: none;"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div style="width:300px;height:300px;overflow:hidden;border:0px">
+            <div style="width:300px;height:480px;margin:-76px 0px 0px -30px;">
+              <iframe src="https://imgsli.com/MzgyMDcw" width="360" height="400" scrolling="no" allow="fullscreen" style="border: none;"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End New Image Comparison Section -->
+  
+  <!-- Paper abstract -->
+  <section class="section hero">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Face restoration has achieved remarkable advancements through the years of development. 
+              However, ensuring that restored facial images exhibit high fidelity, preserve authentic 
+              features, and avoid introducing artifacts or biases remains a significant challenge. 
+              This highlights the need for models that are more "honest" in their reconstruction from 
+              low-quality inputs, accurately reflecting original characteristics.
+              In this work, we propose HonestFace, a novel approach designed to restore faces with 
+              a strong emphasis on such honesty, particularly concerning identity consistency and 
+              texture realism. To achieve this, HonestFace incorporates several key components. 
+              First, we propose an identity embedder to effectively capture and preserve crucial 
+              identity features from both the low-quality input and multiple reference faces. 
+              Second, a masked face alignment method is presented to enhance fine-grained details 
+              and textural authenticity, thereby preventing the generation of patterned or overly 
+              synthetic textures and improving overall clarity.
+              Furthermore, we present a new landmark-based evaluation metric. Based on affine 
+              transformation principles, this metric improves the accuracy compared to conventional 
+              L2 distance calculations for facial feature alignment. Leveraging these contributions 
+              within a one-step diffusion model framework, HonestFace delivers exceptional 
+              restoration results in terms of facial fidelity and realism. Extensive experiments 
+              demonstrate that our approach surpasses existing methods, achieving 
+              superior performance in both visual quality and quantitative assessments. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Method Section-->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-five-sixths">
+          <h2 class="title is-3 has-text-left">Method</h2>
+          <figure>
+            <img data-src="static/images/pipeline.png" alt="Overview of HonestFace" 
+                 src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+            <figcaption class="title is-5">Overview of HonestFace</figcaption>
+          </figure>
+          <div class="content has-text-justified" style="margin-top: 1rem;">
+            <p>
+              We propose <strong>HonestFace</strong>, a novel one-step diffusion model for face restoration. 
+              <strong>First</strong>, the LQ input \(x_L\) is encoded into \(z_L\) by the VAE encoder \(E_\phi\). 
+              <strong>Meanwhile</strong>, \(x_L\) and HQ references \(R = \{r_i\}\) pass through IDE and VRE, 
+              then fused to form the prompt embedding \(p\). <strong>Next</strong>, the UNet predicts \(\varepsilon_\theta\) 
+              to estimate \(\hat{z}_H\). <strong>Finally</strong>, the VAE decoder \(D_\phi\) reconstructs the 
+              output \(\hat{x}_H\). Generator and discriminator are trained alternately. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Method Section-->
+
+  <!-- Results Section -->
+  <section class="section hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-left">
+          <div class="column is-five-sixths">
+            <h2 class="title is-3">Results</h2>
+            <details>
+              <summary class="title is-5">Quantitative Comparisons (click to expand)</summary>
+              <div class="content">
+                <ul>
+                  <li class="title is-6">Compared results with reference-based methods in Table 1 from the main paper. </li>
+                </ul>
+                <p class="has-text-centered">
+                  <img data-src="static/images/quan/ref-based.png" 
+                       src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                </p>
+                <ul>
+                  <li class="title is-6">Compared results with no-reference methods in Table 2 from the main paper. </li>
+                </ul>
+                <p class="has-text-centered">
+                  <img data-src="static/images/quan/no-ref.png"
+                       src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                </p>
+              </div>
+            </details>
+            <details open>
+              <summary class="title is-5">Visual Comparisons (click to expand)</summary>
+              <div class="content">
+                <ul>
+                  <li class="title is-6">Results in Figure 5 on CelebHQRef-Test from the main paper. </li>
+                </ul>
+                <p class="has-text-centered">
+                  <img data-src="static/images/vis/main-celebhqref.png" 
+                       src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                </p>
+                <ul>
+                  <li class="title is-6">Results in Figure 7 on Reface-Test from the main paper. </li>
+                </ul>
+                <p class="has-text-centered">
+                  <img data-src="static/images/vis/main-reface.png"
+                       src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                </p>
+
+                <details>
+                  <summary class="title is-5" style="margin-left: 2rem;">More Comparisons on Real-World Data...</summary>
+                  <div class="content" style="margin-left: 2rem;">
+                    <p class="has-text-centered">
+                      <img data-src="static/images/vis/supp-realworld-1.png" 
+                           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                      <img data-src="static/images/vis/supp-realworld-2.png" 
+                           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    </p>
+                  </div>
+                  <div style="margin-bottom: 2px;"></div>
+                </details>
+
+                <details>
+                  <summary class="title is-5" style="margin-left: 2rem;">More Comparisons on CelebHQRef-Test and Reface-Test...</summary>
+                  <div class="content" style="margin-left: 2rem;">
+                    <p class="has-text-centered">
+                      <img data-src="static/images/vis/supp-celebhqref.png" 
+                           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                      <img data-src="static/images/vis/supp-reface-1.png" 
+                           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                      <img data-src="static/images/vis/supp-reface-2.png" 
+                           src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Results Section -->
+
+  <!-- Video Section -->
+  <!-- <section class="section hero is-small is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-left">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Video</h2>
+        <div id="intro-video" class="video-container">
+          <div class="item item-video-demo">
+            <video poster="" id="demoVideo" controls muted loop width="100%">
+              <source src="static/videos/Demo.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  <!-- End Video Section
+
+<!-- Slide Section -->
+  <!-- <section class="section hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-left">
+        <div class="column is-five-sixths">
+          <h2 class="title">Slide</h2>
+          <iframe src="static/pdfs/Slide.pdf" width="100%" height="550"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  <!-- End Slide Section -->
+
+  <!-- Poster Section -->
+  <!-- <section class="section hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-left">
+        <div class="column is-five-sixths">
+          <h2 class="title">Poster</h2>
+          <iframe src="static/pdfs/Poster.pdf" width="100%" height="550"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+  <!-- End Poster Section -->
+
+  <!-- BibTeX citation -->
+  <section class="section hero is-small is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-left">
+        <div class="column is-five-sixths">
+          <h2 class="title">BibTeX</h2>
+          <pre style="background-color: #ffffff; overflow-x: auto; white-space: pre-wrap;">
+<code>@article{wang2025honestface,
+    title={HonestFace: Towards Honest Face Restoration with One-Step Diffusion Model},
+    author={Wang, Jingkai and Miao, Wu and Gong, Jue and Chen, Zheng and Liu, Xing and Gu, Hong and Liu, Yutong and Zhang, Yulun},
+    journal={arXiv preprint arXiv:2505.18469},
+    year={2025}
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End BibTeX citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>

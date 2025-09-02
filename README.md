@@ -26,7 +26,7 @@ Leveraging these contributions within a one-step diffusion model framework, Hone
 
 <!-- ![vis-main-top](images/vis-main-top.png) -->
 
-[<img src="images/WechatIMG498.jpg" height="272"/>](https://imgsli.com/MzgyMDY3) [<img src="images/WechatIMG500.jpg" height="272"/>](https://imgsli.com/MzgyMDY5) [<img src="images/WechatIMG502.jpg" height="272"/>](https://imgsli.com/MzgyMDcw)<!--[<img src="images/WechatIMG504.jpg" height="220"/>](https://imgsli.com/NDExODgw)-->
+[<img src="images/WechatIMG498.jpg" height="272"/>](https://imgsli.com/MzgyMDY3) [<img src="images/WechatIMG500.jpg" height="272"/>](https://imgsli.com/MzgyMDY5) [<img src="images/WechatIMG502.jpg" height="272"/>](https://imgsli.com/MzgyMDcw)<!-- ![<img src="images/WechatIMG504.jpg" height="220"/>](https://imgsli.com/NDExODgw) -->
 
 ---
 
@@ -114,3 +114,4 @@ If you find the code helpful in your research or work, please cite the following
 ## <a name="acknowledgements"></a>💡 Acknowledgements
 
 [TBD]
+

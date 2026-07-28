@@ -1,4 +1,4 @@
-# HonestFace: Towards Honest Face Restoration with One-Step Diffusion Model
+# [ACM MM 26] HonestFace: Towards Honest Face Restoration with One-Step Diffusion Model
 
 [Jingkai Wang](https://github.com/jkwang28), [Wu Miao](https://github.com/wildddm), [Jue Gong](https://github.com/gobunu), [Zheng Chen](https://zhengchen1999.github.io/), Xing Liu, Hong Gu, [Yutong Liu](https://isabelleliu630.github.io/), and [Yulun Zhang](http://yulunzhang.com/), "HonestFace: Towards Honest Face Restoration with One-Step Diffusion Model", 2025
 
@@ -11,7 +11,8 @@
 
 #### 🔥🔥🔥 News
 
-- **2025-05-23:** This repo is released.
+- **2026-07:** Congratulations! HonestFace is accepted to ACM MM 2026. 🇧🇷🇧🇷🇧🇷
+- **2025-05:** This repo is released.
 
 ---
 

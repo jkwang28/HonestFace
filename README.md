@@ -1,8 +1,8 @@
 # [ACM MM 26] HonestFace: Towards Honest Face Restoration with One-Step Diffusion Model
 
-[Jingkai Wang](https://github.com/jkwang28), [Wu Miao](https://github.com/wildddm), [Jue Gong](https://github.com/gobunu), [Zheng Chen](https://zhengchen1999.github.io/), Xing Liu, Hong Gu, [Yutong Liu](https://isabelleliu630.github.io/), and [Yulun Zhang](http://yulunzhang.com/), "HonestFace: Towards Honest Face Restoration with One-Step Diffusion Model", 2025
+[Jingkai Wang](https://github.com/jkwang28), [Wu Miao](https://github.com/wildddm), [Jue Gong](https://github.com/gobunu), [Zheng Chen](https://zhengchen1999.github.io/), Xing Liu, Hong Gu, [Yutong Liu](https://isabelleliu630.github.io/), and [Yulun Zhang](http://yulunzhang.com/), "HonestFace: Towards Honest Face Restoration with One-Step Diffusion Model", ACM MM, 2026
 
-[![page](https://img.shields.io/badge/Project-Page-blue?logo=github&logoSvg)](https://jkwang28.github.io/HonestFace/)
+[![page](https://img.shields.io/badge/Project-Page-blue?logo=github&logoSvg)](https://jingkaiwang.com/HonestFace/)
 [![arXiv](https://img.shields.io/badge/Paper-arXiv-red?logo=arxiv&logoSvg)](https://arxiv.org/abs/2505.18469)
 [![supp](https://img.shields.io/badge/Supplementary_material-Paper-orange.svg)](https://github.com/jkwang28/HonestFace/releases/download/v1/supp.pdf)
 [![releases](https://img.shields.io/github/downloads/jkwang28/HonestFace/total.svg)](https://github.com/jkwang28/HonestFace/releases)
@@ -104,11 +104,11 @@ Leveraging these contributions within a one-step diffusion model framework, Hone
 If you find the code helpful in your research or work, please cite the following paper(s).
 
 ```
-@article{wang2025honestface,
+@inproceedings{wang2025honestface,
     title={HonestFace: Towards Honest Face Restoration with One-Step Diffusion Model},
     author={Wang, Jingkai and Miao, Wu and Gong, Jue and Chen, Zheng and Liu, Xing and Gu, Hong and Liu, Yutong and Zhang, Yulun},
-    journal={arXiv preprint arXiv:2505.18469},
-    year={2025}
+    booktitle = {Proceedings of the 34rd ACM International Conference on Multimedia},,
+    year={2026}
 }
 ```
 
